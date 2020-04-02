@@ -1,8 +1,12 @@
-#require 'capybara'
+require_relative '../spec_helper'
 
-feature 'Testing infrastructure' do 
-  scenario 'can run app and check page content' do
+
+feature 'I want players to be able to enter their names' do
+  scenario 'They enter their names and submit' do
     visit('/')
-    expect(page).to have_content 'Testing infrastructure working!'
-  end 
-end 
+    fill_in :player_1_name, with: 'Ash Ketchum'
+    fill_in :player_2_name, with: 'Brock(rock)'
+    click_button 'submit'
+    expect(page).to have_content'Ash Ketchum vs Brock(rock)'
+  end
+end
