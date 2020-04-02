@@ -8,4 +8,13 @@ class Player
     @name = name
     @hp = DEFAULT_HP
   end
+
+  def attack(player)
+    player.damaged
+  end
+
+  def damaged
+    @hp -= 10
+  end
+
 end

@@ -18,8 +18,9 @@ describe Player do
 
   describe '#attack' do
     it 'removes 10hp from oppossing player' do
+      value = Player::DEFAULT_HP - 10
       ash.attack(brock)
-      expect(brock.hp).to eq Player:DEFAULT_HP-10
+      expect(brock.hp).to eq value
     end
   end
 
