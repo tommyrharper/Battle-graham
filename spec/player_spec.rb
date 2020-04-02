@@ -9,4 +9,10 @@ describe Player do
     end
   end
 
+  describe '#hp' do
+    it 'returns the hp' do
+      expect(ash.hp).to eq 100
+    end
+  end
+
 end
