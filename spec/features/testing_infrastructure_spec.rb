@@ -14,3 +14,11 @@ feature 'I want to see player 2s hitpoints' do
     expect(page).to have_content'Brock(rock): HP 100'
   end
 end
+
+feature 'Attacking ' do
+  scenario 'Attacks player 2' do
+    sign_in_and_play
+    click_button 'ATTACK!'
+    expect(page).to have_content "Ash Ketchum visicously attacks Brock(rock)!!!"
+  end
+end
