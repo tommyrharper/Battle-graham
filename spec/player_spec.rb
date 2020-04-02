@@ -24,4 +24,12 @@ describe Player do
     end
   end
 
+  describe '#damaged' do
+    it 'removes 10hp from self' do
+      value = Player::DEFAULT_HP - 10
+      ash.damaged
+      expect(ash.hp).to eq value
+    end
+  end
+
 end
